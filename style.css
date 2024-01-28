@@ -1,0 +1,313 @@
+/* .dd{
+    background-image: url(./abstract-black-texture-background-hexagon_206725-413.jpg);
+} */
+
+
+:root {
+    --greenColor--: #3b9c96;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/white.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.to-do-list::-webkit-scrollbar{
+    width: 5px;
+}
+
+.to-do-list::-webkit-scrollbar-thumb{
+background-color:#955b03;
+border-radius: 50px;
+width: 10px;
+
+}
+.to-do-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c57400e8;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow:-6px 20px 20px 12px #00000080;
+    width: 70%;
+    padding: 20px;
+    border-radius: 5px;
+    height: 400px;
+    /* height: 80%; */
+    overflow: auto;
+    height: 60%;
+}
+label{
+    
+        color: white;
+        letter-spacing: 2px;
+    
+}
+
+ .background-color {
+    background-color: white;
+    width: 50px;
+    height: 25px;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px;
+    right: 0;
+    top: 0;
+    padding: 2px;
+    border: 2px solid #00000040;
+    margin: 30px;
+
+}
+
+ .circle {
+    background-color: #d8b960;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+ .black {
+    background-color: #d8b960;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transition: linear 0.2s;
+}
+/* ////////////////////////////////////////// */
+h2{
+    color: #aa1f9b;
+    letter-spacing: 1px;
+}
+
+
+.to-do-list .new-task input {
+    border-style: none;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+
+.to-do-list .new-task input:focus {
+    outline: none;
+}
+
+.to-do-list .new-task button {
+    background-color: #589BAC;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+   
+}
+
+.to-do-list .new-task button:focus {
+    outline: none;
+}
+
+/* //////////////////////////////////////////////////////// */
+
+
+
+.to-do-list .tasks form input {
+    border-style: none;
+    border-bottom: 1px solid gray;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: transparent;
+}
+
+.to-do-list .tasks form input:focus {
+    outline: none;
+}
+
+.to-do-list .tasks button {
+    background-color: #589BAC;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.to-do-list .tasks button:focus {
+    outline: none;
+}
+
+/*  */
+.to-do-list .tasks .perant{
+    padding-inline-start: 0px;
+
+}
+.to-do-list .tasks .perant li {
+    /* background-color: #589BAC; */
+    background-color: #d8b960;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    cursor: pointer;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.to-do-list .tasks .perant li::-webkit-scrollbar{
+    height:  2px;
+}
+.to-do-list .tasks .perant li::-webkit-scrollbar-thumb{
+    background-color:black;  
+    height:0.25px;
+    border-radius: 5px;
+}
+
+
+.to-do-list .tasks .perant .done {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+
+.to-do-list .tasks .perant .task span {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    right: 35px;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+
+
+/* 
+@media (max-width:2560px) {
+    .to-do-list{
+        width: 2000px;
+    height: 800px;
+       
+    }
+    h2{
+        font-size: 60px;
+    }
+    label {
+        font-size: 40px;
+    }
+    
+element.style {
+    font-size: 35px;
+}
+.to-do-list .new-task input{
+    font-size: 35px;
+}
+.to-do-list .new-task button {
+    font-size: 25px;
+    padding: 25px;
+}
+.to-do-list .tasks button{
+    font-size: 25px;
+    padding: 25px; 
+}
+.to-do-list .tasks .perant li {
+    font-size: 45px;
+    padding: 16px;
+}
+.to-do-list .tasks .perant .task span {
+width: 40px;
+height: 40px;
+}
+   .tasks .perant{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media (max-width:2100px) {
+    .to-do-list{
+        width: 1300px;
+    }
+   .tasks .perant{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media (max-width:1500px) {
+    .to-do-list{
+        width: 1000px;
+        height: 700px;
+    }
+ 
+}
+@media (max-width:1290px) {
+    .to-do-list{
+        width: 1000px;
+        height: 700px;
+    }
+ 
+}
+@media (max-width:320px) {
+    .to-do-list{
+        width: 250px;
+    }
+   .tasks .perant{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width:1024px) {
+    .to-do-list{
+        width: 800px;
+       
+    }
+   .tasks .perant{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media (max-width:912px) {
+    .to-do-list{
+        width: 500px;
+    
+       
+    }
+   .tasks .perant{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media (max-width:912px) {
+    .to-do-list{
+        width: 500px;
+    
+       
+    }
+   .tasks .perant{
+        padding: 0;
+        margin: 0;
+    }
+} */
